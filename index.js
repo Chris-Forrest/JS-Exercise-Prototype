@@ -50,9 +50,10 @@ Person.prototype.eat = function(someFood){
   }
 };
 Person.prototype.poop = function(){
-   while (this.stomach.length > 0){
-      this.stomach.pop();
-    }
+   this.stomach = [];
+  // while (this.stomach.length > 0){
+    //  this.stomach.pop();
+  //  }
   };
   Person.prototype.toString = function(){
     return (`${this.name}, ${ this.age}`);
@@ -81,6 +82,11 @@ function Car(model, milesPerGallon) {
 
   Car.prototype.fill = function(gallons){
     this.tank += gallons;
+  };
+
+  Car.prototype.drive = function(distance){
+    this.odometer += distance;
+    this.tank -= distance/this.milesPerGallon;
   };
 }
 
