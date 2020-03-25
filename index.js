@@ -87,6 +87,11 @@ function Car(model, milesPerGallon) {
   Car.prototype.drive = function(distance){
     this.odometer += distance;
     this.tank -= distance/this.milesPerGallon;
+    //if(this.tank >= distance/this.milesPerGallon){
+     //return this.odometer += distance;
+    //}else if(this.tank <= distance/this.milesPerGallon){
+     // return this.tank -= distance/this.milesPerGallon
+    //}
   };
 }
 
