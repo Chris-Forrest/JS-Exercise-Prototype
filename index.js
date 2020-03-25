@@ -53,8 +53,10 @@ Person.prototype.poop = function(){
    while (this.stomach.length > 0){
       this.stomach.pop();
     }
-  
-};
+  };
+  Person.prototype.toString = function(){
+    return (`${this.name}, ${ this.age}`);
+  };
 }
 
 /*
